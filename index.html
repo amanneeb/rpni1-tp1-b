@@ -1,96 +1,123 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="stylesheet" href="./css/styles.css">
     </head>
     <body>
-        <header>
-            <p>Instrument</p>
-            <ul>
-                <li>What we do</li>
-                <li>Who we are</li>
-                <li>Being here</li>
-                <li>Career</li>
+        <header class="entete">
+            <p class="entete__nom-site">Instrument</p>
+            <ul class="menu-principal">
+                <li class="menu-principal__item menu-principal__item--ferme">What we do</li>
+                <li class="menu-principal__item menu-principal__item--ferme">Who we are</li>
+                <li class="menu-principal__item menu-principal__item--ferme">Being here</li>
+                <li class="menu-principal__item menu-principal__item--ferme">Career</li>
             </ul>
         </header>
-        <main>
-            <h1>Build. Grow. Serve.</h1>
-            <p>
-                We are investing $3 million over the next three years in our Build|Grow|Serve program, 
-                created to support and empower Black and underrepresented communities. 
-            </p>
-            <button type="button">Learn more</button>
-            <iframe>
-
-            </iframe>
-            <h2>
-                We enrich human lives through the thoughtful application of design and technology
-            </h2>
-            <section>
-                <picture></picture>
-                <p>It is with great excitement that we announce Kara Place as Instrument’s next CEO.</p>
-                <button type="button">Read more</button>
-            </section>
-            <section>
-                <picture></picture>
-                <p>In the summer of 2020, we reported our representation data and committed to doing so annually. One year later, we are pleased to share an update on our goals, our progress, and the work that still needs to be done.</p>
-                <button type="button">Learn more</button>
-            </section>
-            <section>
-                <picture></picture>
-                <p>As a full-service partner to the world’s most ambitious companies, we create transformational change through best-in-class digital products and communications.</p>
-                <button type="button">What we do</button>
-            </section>  
-            <section>
-                <h2>Explore a few of our most impactful projects</h2>
-                <button type="button">Our work</button>
-            </section> 
-            <section>
-                <div>
-                    <picture></picture>
-                    <h3>Eames Institute</h3>
-                    <p>
-                        Ray and Charles Eames laid the foundation for modern design and created work that has transcended time. 
-                        With an aspiration to bring the Eameses’ timeless methodologies to a modern audience, the Eames Institute enlisted Instrument to co-create a digital platform to unveil their vast collection to the world.
+        <main class="contenu">
+            <div class="intro">
+                <h1 class="intro__titre-principal">Build. Grow. Serve.</h1>
+                <p class="intro__paragraphe">
+                    We are investing $3 million over the next three years in our Build|Grow|Serve program, 
+                    created to support and empower Black and underrepresented communities. 
+                </p>
+                <button class="intro__bouton" type="button">Learn more</button>
+                <figure class="intro__video">
+                    <iframe src="https://www.youtube.com/embed/hHqW0gtiMy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figcaption class="intro__video__titre">Exza Digital Agency All Right Reserved</figcaption>
+                </figure>
+            </div>
+            
+            <div class="design">
+                <h2 class="design__titre">
+                    We enrich human lives through the thoughtful application of design and technology
+                </h2>
+                <section class="representation">
+                    <img class="representation__img" src="./images/representation_update.jpg" alt="update">
+                    <div class="update">
+                        <p>In the summer of 2020, we reported our representation data and committed to doing so annually.
+                            One year later, we are pleased to share an update on our goals, our progress, and the work that still needs to be done.
+                        </p>
+                        <button class="update__bouton" type="button">Read more</button>
+                    </div>
+                    
+                </section>
+                <section class="onAir">
+                    <div class="episode">
+                        <p class="episode__texte">In our third episode of On Air, we explore all that's happened within the last six months, the reality of showing up every day as BIPOC employee in Corporate America,
+                            and our future vision for diversity, equity, and inclusion.
+                        </p>
+                        <button class="episode__bouton" type="button">Learn more</button>
+                    </div>
+                    <img class="onAir_img" src="./images/2020.jpg" alt="episode">    
+                </section>
+                <section class="services">
+                    <img class="services_img">
+                    <div class="whatWeDo">
+                        <p class="whatWeDo__texte">As a full-service partner to the world’s most ambitious companies, 
+                            we create transformational change through best-in-class digital products and communications.</p>
+                        <button class="whatWeDo__bouton" type="button">What we do</button>
+                    </div> 
+                </section>  
+            </div>
+                         
+            <section class="projets">
+                <h2 class="projets__titre">Explore a few of our most impactful projects</h2>
+                <button class="projets__bouton" type="button">Our work</button>
+                <div class="levis">
+                    <img class="levis__img" src="" alt="">
+                    <h3 class="levis__titre">Levi's</h3>
+                    <p class="levis__texte">
+                        We partenered with Levi's, an icon of American industry and culture, 
+                        to reimagine levi.com for a new generation of shoppers and the digital future of retail.
                     </p>
                 </div>
-                <div>
-                    <picture></picture>
-                    <h3>Dropbox "For All Things Worth Saving"</h3>
-                    <p>
-                        To evolve and mature how Dropbox engages with their customers, we developed a multi-year brand platform as well as launched its first campaign titled 'For All Things Worth Saving' — an ecosystem of branded experiences aimed to remind people of the inherent value of their digital files.
+                <div class="dropbox">
+                    <img class="dropbox__img" src="" alt="">
+                    <h3 class="dropbox__titre">Dropbox Brand Campaign</h3>
+                    <p class="dropbox__texte">
+                        Dropbox is on a path to becoming a multi-product company.
+                        To bring their customers new and old along for that journey, we helped reimagine how Dropbox engages with their audience.
                     </p>
                 </div>
             </section>
-            <aside>
-                <img>
-                <img>
-                <img>
-            </aside>
-            <section>
-                <h2>We’d love to be your partner</h2>
-                <button type="button">Get in touch</button>
+            <section class="partenaires">
+                <ul class="list">
+                    <li class="list__item"><img class="list__img"></li>
+                    <li class="list__item"><img class="list__img"></li>
+                    <li class="list__item"><img class="list__img"></li>
+                </ul>
+                <h2 class="partenaires__titre">We’d love to be your partner</h2>
+                <button class="partenaires__bouton" type="button">Get in touch</button>
             </section>       
         </main>
-        <footer>
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>What we do</li>
-                    <li>Work</li>
-                    <li>Who we are</li>
-                    <li>Being here</li>
-                    <li>Careers</li>
-                    <li>Contact</li>
-                    <li>Privacy</li>
+        <footer class="footer">
+            <nav class="footer__nav-principale">
+                <ul class="nav-home">
+                    <li class="nav-home__item">Home</li>
+                    <li class="nav-home__item">What we do</li>
+                    <li class="nav-home__item">Work</li>
+                    <li class="nav-home__item">Who we are</li>
+              <!--
+                    </ul>
+                    <ul class="nav-here">
+              -->  
+                    <li class="nav-here__item">Being here</li>
+                    <li class="nav-here__item">Careers</li>
+                    <li class="nav-here__item">Contact</li>
+                    <li class="nav-here__item">Privacy</li>
                 </ul>
             </nav>
-            <div>
-                <button type="button">Newsletter</button>
-                <img>
-                <img>
-                <img>
-            </div>
+            <nav class="footer__nav-secondaire">
+                <button class="footer__bouton" type="button">Newsletter</button>
+                <ul class="reseaux">
+                    <li class="reseaux__item"><img class="reseaux__img" src="" alt=""></li>
+                    <li class="reseaux__item"><img class="reseaux__img" src="" alt=""></li>
+                    <li class="reseaux__item"><img class="reseaux__img" src="" alt=""></li>
+                </ul>
+            </nav>
         </footer>
+
+        <script src="./js/menu.js"></script>
     </body>
 </html>
+
