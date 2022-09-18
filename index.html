@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0," />
         <link rel="stylesheet" href="./css/styles.css">
     </head>
     <body>
@@ -48,10 +49,10 @@
                         </p>
                         <button class="episode__bouton" type="button">Learn more</button>
                     </div>
-                    <img class="onAir_img" src="./images/2020.jpg" alt="episode">    
+                    <img class="onAir__img" src="./images/2020.jpg" alt="episode">    
                 </section>
                 <section class="services">
-                    <img class="services_img">
+                    <img class="services__img" src="./images/cellulaire.jpg" alt="une main tenant un cellulaire pour prendre une photo">
                     <div class="whatWeDo">
                         <p class="whatWeDo__texte">As a full-service partner to the world’s most ambitious companies, 
                             we create transformational change through best-in-class digital products and communications.</p>
@@ -63,22 +64,25 @@
             <section class="projets">
                 <h2 class="projets__titre">Explore a few of our most impactful projects</h2>
                 <button class="projets__bouton" type="button">Our work</button>
-                <div class="levis">
-                    <img class="levis__img" src="" alt="">
-                    <h3 class="levis__titre">Levi's</h3>
-                    <p class="levis__texte">
-                        We partenered with Levi's, an icon of American industry and culture, 
-                        to reimagine levi.com for a new generation of shoppers and the digital future of retail.
-                    </p>
+                <div class="conteneur-projets">
+                    <section class="levis">
+                        <img class="levis__img" src="./images/magasinage.jpg" alt="personne en train de payer à caisse moderne">
+                        <h3 class="levis__titre">Levi's</h3>
+                        <p class="levis__texte">
+                            We partenered with Levi's, an icon of American industry and culture, 
+                            to reimagine levi.com for a new generation of shoppers and the digital future of retail.
+                        </p>
+                    </section>
+                    <section class="dropbox">
+                        <img class="dropbox__img" src="./images/chambre.jpg" alt="une chambre d'hôtel élégante">
+                        <h3 class="dropbox__titre">Dropbox Brand Campaign</h3>
+                        <p class="dropbox__texte">
+                            Dropbox is on a path to becoming a multi-product company.
+                            To bring their customers new and old along for that journey, we helped reimagine how Dropbox engages with their audience.
+                        </p>
+                    </section>
                 </div>
-                <div class="dropbox">
-                    <img class="dropbox__img" src="" alt="">
-                    <h3 class="dropbox__titre">Dropbox Brand Campaign</h3>
-                    <p class="dropbox__texte">
-                        Dropbox is on a path to becoming a multi-product company.
-                        To bring their customers new and old along for that journey, we helped reimagine how Dropbox engages with their audience.
-                    </p>
-                </div>
+                
             </section>
             <section class="partenaires">
                 <ul class="list">
@@ -91,28 +95,24 @@
             </section>       
         </main>
         <footer class="footer">
-            <nav class="footer__nav-principale">
-                <ul class="nav-home">
-                    <li class="nav-home__item">Home</li>
-                    <li class="nav-home__item">What we do</li>
-                    <li class="nav-home__item">Work</li>
-                    <li class="nav-home__item">Who we are</li>
-              <!--
-                    </ul>
-                    <ul class="nav-here">
-              -->  
-                    <li class="nav-here__item">Being here</li>
-                    <li class="nav-here__item">Careers</li>
-                    <li class="nav-here__item">Contact</li>
-                    <li class="nav-here__item">Privacy</li>
-                </ul>
-            </nav>
-            <nav class="footer__nav-secondaire">
-                <button class="footer__bouton" type="button">Newsletter</button>
+            <ul class="nav-home">
+                <li class="nav-home__item">Home</li>
+                <li class="nav-home__item">What we do</li>
+                <li class="nav-home__item">Work</li>
+                <li class="nav-home__item">Who we are</li>
+            </ul>
+            <ul class="nav-here">
+                <li class="nav-here__item">Being here</li>
+                <li class="nav-here__item">Careers</li>
+                <li class="nav-here__item">Contact</li>
+                <li class="nav-here__item">Privacy</li>
+            </ul>
+            <nav class="nav-secondaire">
+                <button class="nav-secondaire__bouton" type="button">Newsletter</button>
                 <ul class="reseaux">
-                    <li class="reseaux__item"><img class="reseaux__img" src="" alt=""></li>
-                    <li class="reseaux__item"><img class="reseaux__img" src="" alt=""></li>
-                    <li class="reseaux__item"><img class="reseaux__img" src="" alt=""></li>
+                    <li class="reseaux__item"><img class="reseaux__img" src="./images/instagram.svg" alt="instagram"></li>
+                    <li class="reseaux__item"><img class="reseaux__img" src="./images/twitter.svg" alt="twitter"></li>
+                    <li class="reseaux__item"><img class="reseaux__img" src="./images/" alt="linkedin"></li>
                 </ul>
             </nav>
         </footer>

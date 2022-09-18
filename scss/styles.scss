@@ -22,7 +22,9 @@ body{
     background-color: $bgCouleur;
     color: $couleurTexte;
     font-family: $police;
+    max-width: 100%;
     border: #6c83ff solid 2px;
+    margin: 0;
 }
 
 /*EN-TETE*/
@@ -31,7 +33,18 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    .menu-principal{
+        @media(min-width: 800px){
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-end;
+        } 
+        .menu-principal__item{
+            margin: auto 1em;
+        }
+    }
 }
 /*MAIN*/
 /*INTRO*/
@@ -65,53 +78,247 @@ body{
 } 
 
 /*DESIGN*/
+.design{
+    section{
+        margin: 6em 1em;
+    }
+    .design__titre{
+        text-align: center;
+        width: 75%;
+        margin: 2em auto;
+    }
+}
 
 /*REPRESENTATION*/
 .representation{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
     @media(min-width: 800px){
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: space-between;
+        align-items: flex-start;
     }
-
-    .representation_img{
-        display: block;
-       max-width: 100%;
+    .representation__img{
+        max-width: 90%;
+        align-self: center;
+        @media(min-width:800px){
+            max-width: 45%;
+        }
     }
     .update{
         display: block;
+        padding: 2em;
+        @media(min-width:800px){
+            padding: 5em;
+        }
+        .update__bouton{
+            border-radius: 500px;
+            padding: .5em;
+            border: none;
+            background-color: $couleurTexte;
+            width: 8em;
+        }
     }
-    
 }
 
 /*ONAIR*/
-.onAir_img{
-    max-width: 95%;
-    @media(min-width:800px){
-        max-width: 45%;
+.onAir{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    @media(min-width: 800px){
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .onAir__img{
+        max-width: 90%;
+        align-self: center;
+        @media(min-width:800px){
+            max-width: 45%;
+        }
+    }
+    .episode{
+        display: block;
+        padding: 2em;
+        @media(min-width:800px){
+            padding: 5em;
+        }
+        .episode__bouton{
+            border-radius: 500px;
+            padding: .5em;
+            border: none;
+            background-color: $couleurTexte;
+            width: 8em;
+        }
     }
 }
 
+
 /*SERVICES*/
+.services{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    @media(min-width: 800px){
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .services__img{
+        max-width: 90%;
+        align-self: center;
+        @media(min-width:800px){
+            max-width: 45%;
+        }
+        
+    }
+    .whatWeDo{
+        display: block;
+        padding: 2em;
+        @media(min-width:800px){
+            padding: 5em;
+        }
+        .whatWeDo__bouton{
+            border-radius: 500px;
+            padding: .5em;
+            border: none;
+            background-color: $couleurTexte;
+            width: 8em;
+        }
+    }
+}
 
-/*PROJETS*/
+/*PROJETS (Section principale)*/
+.projets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .projets__titre{
+        text-align: center;
+        width: 75%;
+        margin: 2em auto 0.5em auto;
+    }
+    .projets__bouton{
+        border-radius: 500px;
+        padding: .5em;
+        border: none;
+        background-color: $couleurTexte;
+        width: 8em;
+    }
+}
 
-
-/*DROPBOX*/
-
-
+/*PROJETS (Détails des projets)*/
+.conteneur-projets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media(min-width: 800px){
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .levis{
+        margin: 1em;
+        .levis__img{
+            max-width: 100%;
+        }
+    }
+    .dropbox{
+        margin: 1em;
+        .dropbox__img{
+            max-width: 100%;
+        }
+    }
+}
 /*PARTENAIRES*/
+.partenaires{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .partenaires__titre{
+        text-align: center;
+        width: 75%;
+        margin: 2em auto 0.5em auto;
+    }
+    .partenaires__bouton{
+        border-radius: 500px;
+        padding: .5em;
+        margin: 0 auto;
+        border: none;
+        background-color: $couleurTexte;
+        width: 8em;
+    }
+}
+
 
 /*FOOTER*/
 .footer{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: flex-start;
-    .footer__bouton{
-        border: none;
+    border: #6c83ff solid 2px;
+    @media(min-width: 800px){
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    .nav-home{
+        list-style-type: none;
+        .nav-home__item{
+            margin: .7em 0;
+        }
+    }
+    .nav-here{
+        list-style-type: none;
+        .nav-here__item{
+            margin: .7em 0;
+        }
+    }
+}
+.nav-secondaire{
+    @media(min-width:800px){
+        border: #6c83ff solid 2px;
+        justify-items: flex-end;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+    .nav-secondaire__bouton{
+        border-radius: 500px;
+        padding: .5em;
+        margin: 0 auto;
+        border: $couleurTexte solid 1px;
+        background-color: #000;
+        color: $couleurTexte;
+        width: 8em;
+    }
+    .reseaux{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: baseline;
+            list-style-type: none;
+            list-style-type: none;
+            @media(min-width:800px){
+                padding-left: 0;
+            }
+        .reseaux__item{
+            width: 2em;
+            height: 2em;
+            margin: 0 1em;
+        }
     }
 }
