@@ -1,52 +1,73 @@
 /**
- * @author Anaïs Mannée-Batschy <2134649@csfoy.ca>
- * @file JS - Menu
- * @version 0.0.1
+ * @file Un menu simple, responsive bâti en amélioration progressive.
+ * @version v3.1 Mise à jour le 7 février :: changement du préfixe tag pour ref ! 
+ * @author TIMCSF
+ * @todo Problème: si le menu est fermé, les liens de menu ne devrait pas être dans l'ordre de tabulation?
  */
 
- /*const refImageMenu = document.querySelector('.menu-principal');
- let refMenu = document.querySelector('.menuCache');
+//*******************
+// Déclaration d'objet(s)
+//*******************
 
-function changerIcone(){
-    let strMenuOuvert = refImageMenu.classList[1];
-    if(strMenuOuvert === 'ouvert'){
-        refImageMenu.src='./images/hamburger_menu_icon.svg';
-        refImageMenu.classList.remove('.menu-principal__item--ouvert');
-        refImageMenu.classList.add('ferme');
-        refMenu.style.display='none';
-    } else if (strMenuOuvert === 'ferme'){
-        refImageMenu.src='./images/close_icon.svg';
-        refImageMenu.classList.remove('ferme');
-        refImageMenu.classList.add('ouvert');
-        refMenu.style.display='block';
-    }
-}*/
+let menu = {
+  javascriptEnabled: document.body.classList.add('js'),
+  strNavClosed: 'Menu',
+  strNavOpen: 'Fermer',
+  refButton: null,
+  refSpan: null,
+  refNav: document.querySelector('.menu-principal'),
 
+  configurerNav: function () {
+if(innerWidth < 800){
+    //********** Création du bouton du menu mobile
 
-const refMenu = document.querySelector('.menu-principal__item');
+    // On crée VIRTUELLEMENT un bouton et un span (pour le texte du bouton)
+    this.refButton = document.createElement('button');
+    this.refSpan = document.createElement('span');
 
-function deployerMenu(){
-    if(window.innerWidth < 800){
-        console.log("YES: menu hamburger");
-        
-        for(intCpt=0; intCpt<refMenu.length; intCpt++){
-            refMenu.classList.add('menu-principal__item--ferme');
-            refMenu[intCpt].style.display = "none"
-        }
-        
+    // On ajoute le span dans le bouton
+    this.refButton.appendChild(this.refSpan);
 
-    } else {
-        console.log("NO: menu régulier");
-        refMenu.classList.remove('menu-principal__item--ferme');
+    // On ajoute des classes au Button et au span
+    this.refButton.className = 'nav__control';
+    this.refSpan.className = 'nav__span';
 
-    }
+    // On place le texte du Button dans son conteneur span
+    this.refSpan.innerHTML = this.strNavClosed;
+
+    // On ajoute le Button dans le html:
+    // plus précisément comme premier enfant dans le nav  
+    this.refNav.prepend(this.refButton);
+
+    // Ajout de l'écouteur d'événement sur le bouton du menu
+    this.refButton.addEventListener('click', function () {
+      menu.ouvrirFermerNav();
+    });
+
+    // ajouter la classe d'état fermé au menu
+    this.refNav.classList.add('nav--closed');
 }
 
+    
+  },
 
-window.addEventListener('load', function(){
-    deployerMenu();
-});
-window.addEventListener('click', function(){
-    deployerMenu();
-});
+  ouvrirFermerNav: function () {
+    // On bascule (ajoute ou enlève) la classe de fermeture du menu
+    this.refNav.classList.toggle('nav--closed');
 
+    // On change le texte du bouton selon l'état du menu
+    if (this.refNav.classList.contains('nav--closed')) {
+      this.refSpan.innerHTML = this.strNavClosed;
+    } else {
+      this.refSpan.innerHTML = this.strNavOpen;
+    }
+  }
+};
+
+
+//*******************
+// Écouteurs d'événements
+//*******************
+window.addEventListener('load', function () {
+  menu.configurerNav();
+});

@@ -2,21 +2,12 @@
    ========================================================================== */
 
 /****** Variables (peuvent être utilisées dans tous les fichiers) *******/
-/*:root {
-    --couleur-texte: #022b50;
-    --couleur-titres-h1-h3: darkmagenta;
-    --couleur-dominante: darkmagenta;
-    --couleur-secondaire: #418cff;
-    --bg-couleur-contraste:#efefef;
-    --box-shadow:5px 5px 5px;
-}*/
 
-$couleurTexte: #463829;
-$couleurTitresH1H3: rgb(12, 54, 51);
-$couleurDominante: rgb(60, 109, 104);
-$couleurSecondaire: #ffcc41;
-$bgCouleurContraste:#edddcb;
-$boxShadow:5px 5px 5px;
+$bgCouleur: #000;
+$couleurTexte: #fff;
+$couleurSecondaire: #6c83ff;
+$couleurSecondaireDeux: #ffa98e;
+$police: Arial, Helvetica, sans-serif;
 
 /*** Clearfix ***/
 .clearfix::after {

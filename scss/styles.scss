@@ -7,62 +7,122 @@
 ===================================================================*/
 @import url(_utilitaires.scss);
 
-
-
 $bgCouleur: #000;
 $couleurTexte: #fff;
 $couleurSecondaire: #6c83ff;
 $couleurSecondaireDeux: #ffa98e;
 $police: Arial, Helvetica, sans-serif;
 
-html{
-    border: #ffa98e solid 1px;
-}
+
 body{
     background-color: $bgCouleur;
     color: $couleurTexte;
     font-family: $police;
     max-width: 100%;
-    border: #6c83ff solid 2px;
     margin: 0;
+    border: #ffa98e solid 1px;
+    li{
+        &:hover{
+            border-left: solid 3px #ffa98e;
+            border-right: solid 3px #ffa98e;
+        }
+    }
 }
 
 /*EN-TETE*/
 .entete{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    .menu-principal{
+    /*position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    z-index: 3;
+    background-color: $bgCouleur;*/
+    @media(min-width: 800px){
+        position: inherit;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3em;
+    }
+    &__nom-site{
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-transform: uppercase;
         @media(min-width: 800px){
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: flex-end;
-        } 
-        .menu-principal__item{
-            margin: auto 1em;
+            position: inherit;
         }
     }
 }
+.navPrincipale{
+    @media(min-width:800px){
+        position: inherit;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__img{
+        width: 40px;
+        height: 40px;
+    }
+    .menu-principal{
+        /*border: #ffa98e solid 1px;*/
+        padding-left: 0;
+        margin-bottom: 3em;
+        /*margin-top: 15em;*/
+        list-style-type: none;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        @media(min-width: 800px){
+            margin: 0 0;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-start;
+        } 
+        .menu-principal__item{
+            margin: 1.2em 1em;
+            text-transform: uppercase;
+            &:hover{
+                border-left: solid 3px #ffa98e;
+                border-right: solid 3px #ffa98e;
+            }
+            @media(min-width: 800px){
+                margin: 8px 8px;
+            }
+        }
+    }
+}
+
+
 /*MAIN*/
 /*INTRO*/
 .intro{
-    .intro__titre-principal{
-        font-size: 3em;
+    margin: 0 2em;
+    @media(min-width: 800px){
+        margin: 0 0;
     }
-    .intro__paragraphe{
+    &__titre-principal{
+        font-size: 5em;
+        margin-top: 2em;
+    }
+    &__paragraphe{
         width: 75%;
     }
-    .intro__bouton{
+    &__bouton{
         border-radius: 500px;
         background-color: $couleurTexte;
         color: $bgCouleur;
         font-size: .8em;
-        padding: 10px;
+        width: 9em;
+        padding: 1em;
         margin: 5px 5px;
-    }  
+    }
 }
 .intro__video{
     min-width: 100%;
@@ -95,13 +155,13 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 100%;
+    max-width: 100%;
     @media(min-width: 800px){
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
     }
-    .representation__img{
+    &__img{
         max-width: 90%;
         align-self: center;
         @media(min-width:800px){
@@ -114,12 +174,12 @@ body{
         @media(min-width:800px){
             padding: 5em;
         }
-        .update__bouton{
+        &__bouton{
             border-radius: 500px;
-            padding: .5em;
+            padding: 1em;
             border: none;
             background-color: $couleurTexte;
-            width: 8em;
+            width: 9em;
         }
     }
 }
@@ -127,16 +187,16 @@ body{
 /*ONAIR*/
 .onAir{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 100%;
+    max-width: 100%;
     @media(min-width: 800px){
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
     }
-    .onAir__img{
+    &__img{
         max-width: 90%;
         align-self: center;
         @media(min-width:800px){
@@ -149,12 +209,12 @@ body{
         @media(min-width:800px){
             padding: 5em;
         }
-        .episode__bouton{
+        &__bouton{
             border-radius: 500px;
-            padding: .5em;
+            padding: 1em;
             border: none;
             background-color: $couleurTexte;
-            width: 8em;
+            width: 9em;
         }
     }
 }
@@ -166,13 +226,13 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 100%;
+    max-width: 100%;
     @media(min-width: 800px){
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
     }
-    .services__img{
+    &__img{
         max-width: 90%;
         align-self: center;
         @media(min-width:800px){
@@ -186,12 +246,12 @@ body{
         @media(min-width:800px){
             padding: 5em;
         }
-        .whatWeDo__bouton{
+        &__bouton{
             border-radius: 500px;
-            padding: .5em;
+            padding: 1em;
             border: none;
             background-color: $couleurTexte;
-            width: 8em;
+            width: 9em;
         }
     }
 }
@@ -202,17 +262,17 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .projets__titre{
+    &__titre{
         text-align: center;
         width: 75%;
         margin: 2em auto 0.5em auto;
     }
-    .projets__bouton{
+    &__bouton{
         border-radius: 500px;
-        padding: .5em;
+        padding: 1em;
         border: none;
         background-color: $couleurTexte;
-        width: 8em;
+        width: 9em;
     }
 }
 
@@ -246,21 +306,41 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .partenaires__titre{
+    &__titre{
         text-align: center;
         width: 75%;
         margin: 2em auto 0.5em auto;
     }
-    .partenaires__bouton{
+    &__bouton{
+        text-justify: auto;
         border-radius: 500px;
-        padding: .5em;
+        padding: 1em;
         margin: 0 auto;
         border: none;
         background-color: $couleurTexte;
-        width: 8em;
+        width: 9em;
     }
 }
 
+/*LISTE DES LOGOS*/
+.list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media(min-width: 800px){
+        margin-top: 7em;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__img{
+        width: 200px;
+        height: 100px;
+        margin: 1em 5em;
+    }
+}
 
 /*FOOTER*/
 .footer{
@@ -269,41 +349,47 @@ body{
     justify-content: space-evenly;
     align-items: flex-start;
     border: #6c83ff solid 2px;
+    margin-top: 5em;
     @media(min-width: 800px){
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-end;
+        margin-top: 7em;
     }
     .nav-home{
         list-style-type: none;
+        padding-right: 1em;
         .nav-home__item{
             margin: .7em 0;
         }
     }
     .nav-here{
         list-style-type: none;
+        padding-right: 1em;
         .nav-here__item{
             margin: .7em 0;
         }
     }
 }
 .nav-secondaire{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
     @media(min-width:800px){
         border: #6c83ff solid 2px;
         justify-items: flex-end;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: baseline;
+        
     }
-    .nav-secondaire__bouton{
+    &__bouton{
         border-radius: 500px;
-        padding: .5em;
+        padding: 1em;
         margin: 0 auto;
         border: $couleurTexte solid 1px;
         background-color: #000;
+        text-transform: uppercase;
         color: $couleurTexte;
-        width: 8em;
+        width: 11em;
     }
     .reseaux{
             display: flex;
@@ -315,7 +401,7 @@ body{
             @media(min-width:800px){
                 padding-left: 0;
             }
-        .reseaux__item{
+        &__item{
             width: 2em;
             height: 2em;
             margin: 0 1em;
