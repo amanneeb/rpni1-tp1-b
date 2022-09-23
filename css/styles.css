@@ -5,6 +5,11 @@
 /*Utilitaire
 ===================================================================*/
 @import url(_utilitaires.scss);
+html {
+  margin: 0;
+  width: fit-content;
+}
+
 body {
   background-color: #000;
   color: #fff;
@@ -12,10 +17,6 @@ body {
   max-width: 100%;
   margin: 0;
   border: #ffa98e solid 1px;
-}
-body li:hover {
-  border-left: solid 3px #ffa98e;
-  border-right: solid 3px #ffa98e;
 }
 
 /*EN-TETE*/
@@ -48,6 +49,7 @@ body li:hover {
 @media (min-width: 800px) {
   .entete__nom-site {
     position: inherit;
+    margin: 1em;
   }
 }
 
@@ -90,6 +92,8 @@ body li:hover {
 .navPrincipale .menu-principal .menu-principal__item:hover {
   border-left: solid 3px #ffa98e;
   border-right: solid 3px #ffa98e;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 @media (min-width: 800px) {
   .navPrincipale .menu-principal .menu-principal__item {
@@ -346,19 +350,40 @@ body li:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  padding-left: 0;
+  max-width: 100%;
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .list {
     margin-top: 7em;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+.list__item {
+  margin: 3em 5em;
+  padding: 0 auto;
+}
+@media (min-width: 600px) {
+  .list__item {
+    margin: 0 0;
+    padding: 0 0;
   }
 }
 .list__img {
-  width: 200px;
-  height: 100px;
-  margin: 1em 5em;
+  width: 70%;
+}
+@media (min-width: 600px) {
+  .list__img {
+    align-self: center;
+    padding-left: 2em;
+    /*width: 200px;
+    height: 100px;
+    margin: 1em 5em;*/
+  }
 }
 
 /*FOOTER*/
@@ -385,12 +410,24 @@ body li:hover {
 .footer .nav-home .nav-home__item {
   margin: 0.7em 0;
 }
+.footer .nav-home:hover {
+  border-left: solid 3px #ffa98e;
+  border-right: solid 3px #ffa98e;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 .footer .nav-here {
   list-style-type: none;
   padding-right: 1em;
 }
 .footer .nav-here .nav-here__item {
   margin: 0.7em 0;
+}
+.footer .nav-here:hover {
+  border-left: solid 3px #ffa98e;
+  border-right: solid 3px #ffa98e;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .nav-secondaire {
